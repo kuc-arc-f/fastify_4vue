@@ -1,0 +1,35 @@
+{
+  "type": "module",
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "dev": "NODE_ENV=develop nodemon -I --exec node --experimental-specifier-resolution=node  --loader ts-node/esm ./src/index.ts",
+    "dev:test99": "nodemon --exec ts-node src/index.ts --project ./tsconfig.json",
+    "build": "node build.js",
+    "build:test": "vite build && vite build --mode client",
+    "test": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "@fastify/static": "^7.0.0",
+    "axios": "^1.6.5",
+    "esm": "^3.2.25",
+    "fastify": "^4.26.0",
+    "nodemon": "^3.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ts-node": "^10.9.2",
+    "vue": "^3.4.15",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.6",
+    "@types/react": "^18.2.23",
+    "@types/react-dom": "^18.2.8",
+    "@vitejs/plugin-vue": "^5.0.3",
+    "rimraf": "^3.0.2",
+    "ts-node-dev": "^2.0.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12",
+    "vue-tsc": "^1.8.27"
+  }
+}
